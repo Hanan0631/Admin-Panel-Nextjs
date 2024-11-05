@@ -1,5 +1,5 @@
 //services
-import TanstackQueryProvider from "services/TanstackQueryProvider";
+import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 
 //styles
 import "@/styles/globals.css";
