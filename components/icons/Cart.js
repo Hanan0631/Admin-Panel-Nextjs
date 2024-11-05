@@ -18,7 +18,7 @@ function Cart() {
         {" "}
         <g clipPath="url(#clip0_15_35)">
           {" "}
-          <rect width="24" height="24" fill="white"></rect>{" "}
+          <rect width="24" height="24" fill="#f7f8f8"></rect>{" "}
           <path
             d="M5.33331 6H19.8672C20.4687 6 20.9341 6.52718 20.8595 7.12403L20.1095 13.124C20.0469 13.6245 19.6215 14 19.1172 14H16.5555H9.44442H7.99998"
             stroke="#282828"

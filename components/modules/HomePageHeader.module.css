@@ -1,0 +1,39 @@
+.header {
+  max-width: 1140px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 35px;
+}
+
+.logo div {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+
+.logo div input {
+  border: none;
+  color: #282828;
+  width: 300px;
+}
+
+.logo div input:hover,
+.logo div input:focus {
+  outline: none;
+}
+
+.cart {
+  margin-left: 20px;
+  background-color: #f7f8f8;
+}

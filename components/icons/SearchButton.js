@@ -1,4 +1,4 @@
-function Search() {
+function SearchButton() {
   return (
     <svg
       width="40px"
@@ -42,4 +42,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchButton;

@@ -1,0 +1,7 @@
+.Container {
+  background-color: #f7f8f8;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
