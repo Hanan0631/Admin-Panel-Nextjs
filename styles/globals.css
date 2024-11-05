@@ -1,0 +1,34 @@
+:root {
+  font-family: "Vazir", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  direction: rtl;
+}
+
+body {
+  margin: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
