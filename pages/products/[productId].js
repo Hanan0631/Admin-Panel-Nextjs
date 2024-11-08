@@ -31,7 +31,7 @@ export async function getStaticProps(context) {
   const { params } = context;
   const data = await api.get(`products/${params.productId}`);
 
-  if (!data.data.name) {
+  if (!data.data) {
     return {
       notFound: true,
     };

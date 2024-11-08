@@ -14,7 +14,7 @@ import Link from "next/link";
 function ProductCard({ item }) {
   return (
     <div className={styles.cardContainer}>
-      <Link href={`${item.id}`}>
+      <Link href={`products/${item.id}`}>
         <h3>{item.name}</h3>
       </Link>
       <p>{sp(item.price)} تومان</p>
