@@ -1,6 +1,6 @@
 .header {
   max-width: 1140px;
-  margin: 0px auto;
+  margin: 40px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,7 @@
 
 .logo div {
   display: flex;
-  background-color: #ffffff;
+  background-color: #f7f8f8;
   border: 1px solid #e4e4e4;
   padding: 10px;
   border-radius: 16px;
@@ -24,6 +24,7 @@
 
 .logo div input {
   border: none;
+  background-color: #f7f8f8;
   color: #282828;
   width: 300px;
 }
@@ -35,5 +36,4 @@
 
 .cart {
   margin-left: 20px;
-  background-color: #f7f8f8;
 }

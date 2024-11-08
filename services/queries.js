@@ -15,7 +15,7 @@ const useFetchProductsData = (page, search) => {
 
   if (search) queryClient.cancelQueries(queryKey);
 
-  const queryFn = ({ signal }) => api.get(`products`, { signal });
+  const queryFn = ({ signal }) => api.get(`products?page=${page}&limit=10`, { signal });
 
   return useQuery({ queryKey, queryFn, placeholderData: keepPreviousData });
 };
