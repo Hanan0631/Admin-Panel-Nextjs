@@ -1,6 +1,3 @@
-//cookies-next
-import { setCookie } from "cookies-next";
-
 //next
 import { useRouter } from "next/router";
 
@@ -11,17 +8,16 @@ import { useForm } from "react-hook-form";
 import Logo from "../icons/Logo";
 
 //services
-import { useLogin } from "services/mutations";
+import { useRegister } from "services/mutations";
 
 //utils
 import { errorToast, successToast } from "utils/toast";
 
 //styles
-import styles from "./Form.module.css";
+import styles from "./form.module.css";
 
-function Login() {
-  const router = useRouter();
-
+function Register() {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -32,30 +28,30 @@ function Login() {
   const password = watch("password");
   const username = watch("username");
 
-  const { mutate } = useLogin();
+  const { mutate } = useRegister();
 
   const onSubmit = () => {
     mutate(
       { username, password },
       {
-        onSuccess: (data) => {
-          setCookie("token", data.data?.token);
-          successToast("ورود شما با موفقیت انجام شد");
-          router.push("/");
+        onSuccess: () => {
+          successToast("ثبت نام شما با موفقیت انجام شد");
+          router.push("/login");
         },
         onError: (error) => {
-          if (error.status === 400)
-            errorToast("نام کاربری یا رمز عبور اشتباه است");
+          console.log(error);
+          if (error.status === 400) errorToast("شما قبلا ثبت نام کرده اید");
         },
       }
     );
   };
+
   return (
     <div className={styles.formContainer}>
       <h1>بوت کمپ بوتواستارت</h1>
       <div className={styles.form}>
         <Logo />
-        <h3>فرم ورود</h3>
+        <h3>فرم ثبت نام</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
@@ -82,12 +78,24 @@ function Login() {
             <p>{errors.password?.message}</p>
           </div>
 
-          <button type="submit">ورود</button>
+          <div>
+            <input
+              placeholder="تکرار رمز عبور"
+              type="password"
+              {...register("confirmPassword", {
+                validate: (value) =>
+                  value === password || "رمز عبور به درستی وارد نشده است.",
+              })}
+            />
+            <p>{errors.confirmPassword?.message}</p>
+          </div>
+
+          <button type="submit">ثبت نام</button>
         </form>
-        <span onClick={() => router.push("/register")}>ایجاد حساب کاربری!</span>
+        <span onClick={() => router.push("/login")}>حساب کاربری دارید؟</span>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;
