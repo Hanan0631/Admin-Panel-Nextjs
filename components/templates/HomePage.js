@@ -1,14 +1,16 @@
 //react
 import { useEffect, useState } from "react";
 
+//components
+import HomePageHeader from "../modules/HomePageHeader";
+import ProductCard from "../modules/ProductCard";
+import Pagination from "../modules/Pagination";
+
 //services
 import { useFetchProductsData } from "services/queries";
 
 //styles
 import styles from "./HomePage.module.css";
-import HomePageHeader from "../modules/HomePageHeader";
-import ProductCard from "../modules/ProductCard";
-import Pagination from "../modules/Pagination";
 
 function HomePage({ totalPages, currentPage, products }) {
   const [search, setSearch] = useState("");

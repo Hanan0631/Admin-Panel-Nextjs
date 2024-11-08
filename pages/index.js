@@ -1,4 +1,7 @@
+//components
 import HomePage from "@/components/templates/HomePage";
+
+//configs
 import api from "@/configs/api";
 
 function Home({ products, totalPages, currentPage }) {
