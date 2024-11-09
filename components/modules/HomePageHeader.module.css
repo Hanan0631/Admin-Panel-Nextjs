@@ -15,7 +15,7 @@
 
 .logo div {
   display: flex;
-  background-color: #f7f8f8;
+  background-color: #ffffff;
   border: 1px solid #e4e4e4;
   padding: 10px;
   border-radius: 16px;
@@ -24,7 +24,7 @@
 
 .logo div input {
   border: none;
-  background-color: #f7f8f8;
+  background-color: #ffffff;
   color: #282828;
   width: 300px;
 }

@@ -17,7 +17,7 @@ function SearchButton() {
         {" "}
         <g clipPath="url(#clip0_15_152)">
           {" "}
-          <rect width="24" height="24" fill="#f7f8f8"></rect>{" "}
+          <rect width="24" height="24" fill="white"></rect>{" "}
           <circle
             cx="10.5"
             cy="10.5"

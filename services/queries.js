@@ -1,8 +1,8 @@
 //tanstack
 import {
-    keepPreviousData,
-    useQuery,
-    useQueryClient,
+  keepPreviousData,
+  useQuery,
+  useQueryClient,
 } from "@tanstack/react-query";
 
 //configs
@@ -15,9 +15,17 @@ const useFetchProductsData = (page, search) => {
 
   if (search) queryClient.cancelQueries(queryKey);
 
-  const queryFn = ({ signal }) => api.get(`products?page=${page}&limit=10`, { signal });
+  const queryFn = ({ signal }) =>
+    api.get(`products?page=${page}&limit=10`, { signal });
 
   return useQuery({ queryKey, queryFn, placeholderData: keepPreviousData });
 };
 
-export { useFetchProductsData };
+const useFetchProductById = (id) => {
+  const queryKey = ["product", id];
+  const queryFn = () => api.get(`products/${id}`);
+
+  return useQuery({ queryKey, queryFn });
+};
+
+export { useFetchProductsData, useFetchProductById };

@@ -7,8 +7,8 @@ function EditAdmin() {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512.001 512.001"
       xmlSpace="preserve"
-      width="40px"
-      height="40px"
+      width="20px"
+      height="20px"
       fill="#000000"
     >
       <g id="SVGRepoBgCarrier" strokeWidth="0"></g>

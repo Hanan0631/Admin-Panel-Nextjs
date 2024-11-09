@@ -16,4 +16,35 @@ const useLogin = () => {
   return useMutation({ mutationFn });
 };
 
-export { useRegister, useLogin };
+const useAddProduct = () => {
+  const mutationFn = (data) => api.post("products", data);
+
+  return useMutation({ mutationFn });
+};
+
+const useDeleteProductById = () => {
+  const mutationFn = (id) => api.delete(`products/${id}`);
+
+  return useMutation({ mutationFn });
+};
+
+const useEditProduct = () => {
+  const mutationFn = ({ id, data }) => api.put(`products/${id}`, data);
+
+  return useMutation({ mutationFn });
+};
+
+const useDeleteMultipleProducts = () => {
+  const mutationFn = ({ data }) => api.delete("products", { data });
+
+  return useMutation({ mutationFn });
+};
+
+export {
+  useRegister,
+  useLogin,
+  useAddProduct,
+  useDeleteProductById,
+  useEditProduct,
+  useDeleteMultipleProducts,
+};
