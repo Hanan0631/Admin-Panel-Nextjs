@@ -28,7 +28,6 @@ function DeleteProduct({ setDeleteModal, id, setId, pageInfo, setPage }) {
       },
     });
     if (pageInfo?.data.length === 1) {
-      console.log(pageInfo.data.length);
       setPage((prevPage) => prevPage - 1);
     }
    

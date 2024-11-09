@@ -1,6 +1,10 @@
 //react
 import { useState } from "react";
 
+//react-toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 //services
 import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 
@@ -13,6 +17,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <TanstackQueryProvider>
       <Component {...pageProps} page={page} setPage={setPage} />
+      <ToastContainer />
     </TanstackQueryProvider>
   );
 }
